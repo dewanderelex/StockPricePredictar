@@ -1,45 +1,44 @@
-# Python: Getting Started
+# Stock price prediction
+### By Alex Nguyen | Gettysburg College Class of 2022
 
-A barebones Django app, which can easily be deployed to Heroku.
+This is the website developed with Reactjs as front-end and python as back-end. This website predicts the stock price of many markets such as joint stock companies or cryptocurrency. 
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+I use the data [Here](https://www.alphavantage.co).
 
-## Running Locally
+## How to test the website in localhost
+#### Requirements:
+* Python Environment
+* Nodejs Environment
+* Reactjs
 
-Make sure you have Python 3.7 [installed locally](http://install.python-guide.org). To push to Heroku, you'll need to install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), as well as [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
 
-```sh
-$ git clone https://github.com/heroku/python-getting-started.git
-$ cd python-getting-started
-
-$ python3 -m venv getting-started
-$ pip install -r requirements.txt
-
-$ createdb python_getting_started
-
-$ python manage.py migrate
-$ python manage.py collectstatic
-
-$ heroku local
+1. Change directory to client folder
 ```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-
-$ heroku run python manage.py migrate
-$ heroku open
+cd ./frontend
+```
+2. Install dependency
+```
+npm install
 ```
 or
+```
+yarn -d
+```
+3. Build pack
+```
+npm run build
+```
+4. Change directory to server folder
+```
+cd ../server
+```
+5. Install python requirement packages
+```
+pip install -r requirements.txt
+```
+6. Run server on localhost (Default PORT: 8080)
+```
+python manage.py runserver
+```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+# Have a good one!
